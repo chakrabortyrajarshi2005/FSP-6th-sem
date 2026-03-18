@@ -1,0 +1,142 @@
+:root {
+  --bg:#fff;
+  --card:#f9f9f9;
+  --text:#000;
+  --border:#e5e5e5;
+}
+
+.dark {
+  --bg:#000;
+  --card:#111;
+  --text:#fff;
+  --border:#222;
+}
+
+*{
+  box-sizing:border-box;
+  transition:.2s;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* Layout */
+.app{
+  display:flex;
+  height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+  width:280px;
+  padding:20px;
+  border-right:1px solid var(--border);
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.sidebar h1{
+  margin:0;
+}
+
+/* Inputs */
+input,select,button{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+}
+
+button{
+  cursor:pointer;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* Row */
+.row{
+  display:flex;
+  gap:10px;
+}
+
+/* Filters */
+.filters{
+  display:flex;
+  gap:10px;
+}
+
+/* Stats */
+.stats{
+  margin-top:auto;
+  font-size:14px;
+}
+
+/* Main */
+.main{
+  flex:1;
+  padding:20px;
+}
+
+/* Board */
+.board{
+  display:flex;
+  gap:20px;
+}
+
+.column{
+  flex:1;
+  background:var(--card);
+  padding:15px;
+  border-radius:15px;
+  border:1px solid var(--border);
+}
+
+.column h3{
+  margin-top:0;
+}
+
+/* Task Card */
+.task{
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  margin-bottom:10px;
+  background:var(--bg);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.task:hover{
+  transform:translateY(-3px);
+}
+
+/* Priority */
+.priority-high{border-left:4px solid black;}
+.priority-medium{border-left:4px dashed black;}
+.priority-low{border-left:2px dotted black;}
+
+/* Done */
+.done{
+  opacity:0.4;
+  text-decoration:line-through;
+}
+
+/* Empty */
+.empty{
+  text-align:center;
+  margin-top:50px;
+}
+
+.empty img{
+  width:120px;
+  opacity:0.6;
+}
