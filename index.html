@@ -1,74 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Todo Pro</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Todo Pro</title>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<aside class="sidebar">
+				<h1>TODO</h1>
 
-<div class="app">
+				<input
+					id="taskInput"
+					placeholder="Add task..." />
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h1>TODO</h1>
+				<div class="row">
+					<select id="priority">
+						<option value="low">Low</option>
+						<option value="medium">Medium</option>
+						<option value="high">High</option>
+					</select>
+					<input
+						type="date"
+						id="date" />
+					<button id="addBtn">+</button>
+				</div>
 
-    <input id="taskInput" placeholder="Add task..." />
-    
-    <div class="row">
-      <select id="priority">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
-      <input type="date" id="date">
-      <button id="addBtn">+</button>
-    </div>
+				<input
+					id="search"
+					placeholder="Search..." />
 
-    <input id="search" placeholder="Search..." />
+				<div class="filters">
+					<button data-filter="all">All</button>
+					<button data-filter="completed">Done</button>
+					<button data-filter="pending">Pending</button>
+				</div>
 
-    <div class="filters">
-      <button data-filter="all">All</button>
-      <button data-filter="completed">Done</button>
-      <button data-filter="pending">Pending</button>
-    </div>
+				<button id="themeToggle">🌙</button>
 
-    <button id="themeToggle">🌙</button>
+				<div
+					class="stats"
+					id="stats"></div>
+			</aside>
 
-    <div class="stats" id="stats"></div>
-  </aside>
+			<main class="main">
+				<div class="board">
+					<div
+						class="column"
+						data-col="todo">
+						<h3>Todo</h3>
+						<div
+							class="list"
+							id="todo"></div>
+					</div>
 
-  <!-- Main -->
-  <main class="main">
+					<div
+						class="column"
+						data-col="doing">
+						<h3>Doing</h3>
+						<div
+							class="list"
+							id="doing"></div>
+					</div>
 
-    <div class="board">
+					<div
+						class="column"
+						data-col="done">
+						<h3>Done</h3>
+						<div
+							class="list"
+							id="done"></div>
+					</div>
+				</div>
 
-      <div class="column" data-col="todo">
-        <h3>Todo</h3>
-        <div class="list" id="todo"></div>
-      </div>
+				<div
+					id="empty"
+					class="empty">
+					<img src="https://cdn-icons-png.flaticon.com/512/4076/4076478.png" />
+					<p>No tasks yet</p>
+				</div>
+			</main>
+		</div>
 
-      <div class="column" data-col="doing">
-        <h3>Doing</h3>
-        <div class="list" id="doing"></div>
-      </div>
-
-      <div class="column" data-col="done">
-        <h3>Done</h3>
-        <div class="list" id="done"></div>
-      </div>
-
-    </div>
-
-    <div id="empty" class="empty">
-      <img src="https://cdn-icons-png.flaticon.com/512/4076/4076478.png"/>
-      <p>No tasks yet</p>
-    </div>
-
-  </main>
-
-</div>
-
-<script src="app.js"></script>
-</body>
+		<script src="app.js"></script>
+	</body>
 </html>

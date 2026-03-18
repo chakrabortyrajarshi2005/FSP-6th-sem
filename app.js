@@ -62,7 +62,7 @@ function toggle(i) {
 	render();
 }
 
-/* Drag Drop */
+
 let dragIndex;
 
 document.querySelectorAll('.column').forEach((col) => {
@@ -74,7 +74,7 @@ document.querySelectorAll('.column').forEach((col) => {
 	});
 });
 
-/* Events */
+
 addBtn.onclick = add;
 input.addEventListener('keypress', (e) => e.key === 'Enter' && add());
 
